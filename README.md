@@ -32,7 +32,7 @@ To compile the EP1 AlarmNotifications application, you need the [GNU C++ compile
 
 In addition, AlarmNotifications uses the [Qt framework] (https://qt-project.org/), so the Qt4 Core, Gui, Network, and Phonon libraries as well as their corresponding header files are required, at minimum version 4.6.
 
-In the last years, the major Linux desktop environments have agreed on a standard API to display notifications on the desktop. As a client component, [libnotify] (http://www.galago-project.org/docs/api/libnotify/) has been created so that an applications can be desktop-agnostic. AlarmNotifications uses it to display its alerts according to the user's taste and settings. For compiling AlarmNotifications, the header files of libnotify are required.
+In the last years, the major Linux desktop environments have agreed on a standard API to display notifications on the desktop. As a client component, [libnotify] (http://www.galago-project.org/docs/api/libnotify/) has been created so that applications can be desktop-agnostic. AlarmNotifications uses it to display its alerts according to the user's taste and settings. For compiling AlarmNotifications, the header files of libnotify are required.
 
 Optionally, the AlarmNotifications desktop widget can also use the new [Status Notifier Item API] (http://www.notmart.org/misc/statusnotifieritem/index.html). To use this, at least Platform version 4.4 of the [KDE Software Compilation] (https://www.kde.org) is required. If the requirement is not fulfilled, the creation of this flavour of AlarmNotifications is skipped automatically. In the meantime, the Status Notifier API has also received support from other desktop environments than KDE Plasma, so running this flavour of AlarmNotifications does not require running a [Plasma Workspace] (https://www.kde.org/workspaces/).
 
@@ -43,7 +43,8 @@ Last but not least, the build process is controlled by [CMake] (http://www.cmake
 If all the prerequisites listed above are fulfilled, compiling AlarmNotifications should be quite straightforward:
 
 If you haven't done so already, grab the most recent source code from GitHub:
-* `git clone https://github.com/ttrubep1/AlarmNotifications.git`
+* `git clone --recursive https://github.com/ttrubep1/AlarmNotifications.git`<br />
+(The option `--recursive` is necessary to also checkout the submodules used within this project.)
 
 After git has done its job, descend into the newly generated directory:
 * `cd AlarmNotifications`
