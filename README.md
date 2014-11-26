@@ -132,7 +132,7 @@ E-mail address that should be used as the sender of the alarm notification e-mai
 
 E-mail address (e.g. address of a mailing list) that receives the alarm notifications. Can be a pure e-mail address or name and address in the form `Max Mustermann <mustermann@example.com>`.
 
-### FlashLightRelaisDevideNode
+### FlashLightRelaisDeviceNode
 
 The device file where the commands to the relais controlling the flash light should be written to. Usually a path like `/dev/ttyUSBX` with `X` representing a number `0` or greater. Please set the permissions on this device accordingly, so that `an-daemon` can run without root access and still write to the device. To achieve this you may want to [write an udev rule] (http://www.reactivated.net/writing_udev_rules.html) for your relais.
 
