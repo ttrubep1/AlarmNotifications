@@ -1,0 +1,33 @@
+The icons used for "AlarmNotifications" that are contained in this directory,
+have been taken from the Oxygen Project of the KDE Software Compilation, whose
+internet presence can be found at this address:
+https://techbase.kde.org/Projects/Oxygen
+
+The homepage of the KDE project itself is here: https://www.kde.org/
+
+The copyright owners have released these icons under the conditions of the GNU
+Lesser General Public License, version 3. The text of this license can be found
+in the file named "LICENSE" in this directory. This license text is a supplement
+to the GNU General Public License, version 3, whose full text can be found in the
+"LICENSE" file in the main directory of this project.
+
+To fullfill the license conditions that mandates that users must be given access to
+the source code of a binary file, the vector graphics that were used to generate
+the PNG files are also present in this directory.
+Further information regarding the licensing of the icons can be found at this
+address:
+https://techbase.kde.org/Projects/Oxygen/Licensing
+
+
+The icon files have been renamed according to their use within the
+AlarmNotifications project. Here is a translation table to the original icon
+name within the Oxygen project:
+
+Current name -> original name:
+ activealarm -> dialog-warning
+ activeok -> help-feedback
+ configure -> configure
+ disable -> dialog-cancel
+ disabled -> face-plain
+ exit -> application-exit
+ enable -> dialog-ok-apply
