@@ -126,11 +126,11 @@ The TCP port where the SMTP server is listening, usually 25. Please do not use p
 
 ### EMailNotificationFrom
 
-E-mail address that should be used as the sender of the alarm notification e-mails. Can be a pure e-mail address or name and address in the form `Max Mustermann <mustermann@example.com>`.
+E-mail address that should be used as the sender of the alarm notification e-mails. Please use only a pure e-mail address as it will be expanded like `Alarm Notification Daemon <sender@example.com>`.
 
 ### EMailNotificationTo
 
-E-mail address (e.g. address of a mailing list) that receives the alarm notifications. Can be a pure e-mail address or name and address in the form `Max Mustermann <mustermann@example.com>`.
+E-mail address (e.g. address of a mailing list) that receives the alarm notifications. Please use only a pure e-mail address as it will be expanded like `Alarm Notification Mailing List <receiver@example.com>`.
 
 ### FlashLightRelaisDeviceNode
 
