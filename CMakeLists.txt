@@ -165,3 +165,17 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv) # The Beedo engine is activated automa
   set_target_properties(an-desktop-beamtime PROPERTIES COMPILE_FLAGS "${COMPILE_FLAGS} -DBEEDO")
 endif (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv)
 target_link_libraries(an-config alarmwatcherconfigfile alarmwatchererror ${LibsCore} ${LibsGui})
+
+# Install created binaries
+install(TARGETS an-config RUNTIME DESTINATION bin)
+install(TARGETS an-daemon RUNTIME DESTINATION bin)
+install(TARGETS an-desktop RUNTIME DESTINATION bin)
+if (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv) # The Beedo engine is activated automatically if its video file is present
+  install(TARGETS an-desktop-beamtime RUNTIME DESTINATION bin)
+endif (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv)
+if ( NOT ( ${KDE_VERSION_MINOR} LESS 4 ) ) # KStatusNotifierItem is not available in KDE versions before 4.4.
+  install(TARGETS an-desktop-kde4 RUNTIME DESTINATION bin)
+  if (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv) # The Beedo engine is activated automatically if its video file is present
+    install(TARGETS an-desktop-kde4-beamtime RUNTIME DESTINATION bin)
+  endif (EXISTS ${CMAKE_SOURCE_DIR}/beedo.ogv)
+endif ( NOT ( ${KDE_VERSION_MINOR} LESS 4 ) )
